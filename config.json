@@ -7,12 +7,22 @@
         "args": {}
     },
     "data_loader": {
-        "type": "MnistDataLoader",
+        "type": "KimchiDataLoader",
         "args":{
-            "data_dir": "data/",
+            "data_dir": "dataset/train",
             "batch_size": 128,
             "shuffle": true,
-            "validation_split": 0.1,
+            "validation_split": 0.0,
+            "num_workers": 2
+        }
+    },
+    "valid_data_loader": {
+        "type": "KimchiValidLoader",
+        "args": {
+            "data_dir": "dataset/valid",
+            "batch_size": 128,
+            "shuffle": true,
+            "validation_split": 0.0,
             "num_workers": 2
         }
     },
